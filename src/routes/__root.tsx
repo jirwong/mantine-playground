@@ -7,6 +7,7 @@ import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
+import { AppLayout } from "../components/AppLayout";
 import appCss from "../styles.css?url";
 import { theme } from "../theme";
 
@@ -21,7 +22,7 @@ export const Route = createRootRoute({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "TanStack Start Starter",
+				title: "Mantine Playground",
 			},
 		],
 		links: [
@@ -31,7 +32,7 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
-	shellComponent: RootDocument,
+	component: AppLayout,
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -61,3 +62,5 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 		</html>
 	);
 }
+
+export { RootDocument };

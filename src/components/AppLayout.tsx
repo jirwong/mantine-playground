@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import {
 	AppShell,
 	Burger,
@@ -6,11 +8,10 @@ import {
 	Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { Outlet } from "@tanstack/react-router";
 
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
 
-export function AppLayout() {
+export function AppLayout({ children }: { children: ReactNode }) {
 	const [opened, { toggle }] = useDisclosure();
 
 	return (
@@ -49,7 +50,7 @@ export function AppLayout() {
 
 			<AppShell.Main>
 				<Container size="md">
-					<Outlet />
+					{children}
 				</Container>
 			</AppShell.Main>
 

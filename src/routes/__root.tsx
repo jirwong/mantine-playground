@@ -32,7 +32,7 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
-	component: AppLayout,
+	shellComponent: RootDocument,
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -44,7 +44,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<body>
 				<MantineProvider theme={theme} defaultColorScheme="light">
-					{children}
+					<AppLayout>{children}</AppLayout>
 					<TanStackDevtools
 						config={{
 							position: "bottom-right",
@@ -62,5 +62,3 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 		</html>
 	);
 }
-
-export { RootDocument };

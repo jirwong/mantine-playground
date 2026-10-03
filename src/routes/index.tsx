@@ -31,7 +31,11 @@ function Home() {
 				<Button variant="light">Light button</Button>
 				<Badge color="teal">Ready</Badge>
 			</Group>
-			<TextInput label="Playground input" placeholder="Type something..." mb="md" />
+			<TextInput
+				label="Playground input"
+				placeholder="Type something..."
+				mb="md"
+			/>
 			<Switch label="Dark mode friendly switch" defaultChecked />
 		</>
 	);

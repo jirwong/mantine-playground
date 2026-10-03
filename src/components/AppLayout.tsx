@@ -1,13 +1,6 @@
-import type { ReactNode } from "react";
-
-import {
-	AppShell,
-	Burger,
-	Container,
-	Group,
-	Text,
-} from "@mantine/core";
+import { AppShell, Burger, Container, Group, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import type { ReactNode } from "react";
 
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
 
@@ -49,9 +42,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
 			</AppShell.Navbar>
 
 			<AppShell.Main>
-				<Container size="md">
-					{children}
-				</Container>
+				<Container size="md">{children}</Container>
 			</AppShell.Main>
 
 			<AppShell.Footer p="xs">
